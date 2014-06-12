@@ -1123,10 +1123,11 @@ local function AdvDupe2_Spawn()
 						print("AD2 PostEntityPaste Error: "..tostring(valid))
 					end
 				end
+
+		end
 				ApplyEntityModifiers( Queue.Player, Ent )
 				ApplyBoneModifiers( Queue.Player, Ent )
-		end
-		
+				
 			Queue.Entity = false
 			Queue.Constraint = true
 			Queue.Current = 1
