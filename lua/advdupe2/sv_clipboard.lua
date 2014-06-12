@@ -1113,8 +1113,8 @@ local function AdvDupe2_Spawn()
 		if(Queue.Current>#Queue.SortedEntities)then
 			
 			for _,Ent in pairs(Queue.CreatedEntities)do
-				ApplyEntityModifiers( Queue.Player, Ent )
-				ApplyBoneModifiers( Queue.Player, Ent )
+				--ApplyEntityModifiers( Queue.Player, Ent )
+				--ApplyBoneModifiers( Queue.Player, Ent )
 			
 				--If the entity has a PostEntityPaste function tell it to use it now
 				if Ent.PostEntityPaste then
@@ -1126,8 +1126,6 @@ local function AdvDupe2_Spawn()
 					ApplyBoneModifiers( Queue.Player, Ent )
 			
 				end
-				ApplyEntityModifiers( Queue.Player, Ent )
-				ApplyBoneModifiers( Queue.Player, Ent )
 			
 
 		end
