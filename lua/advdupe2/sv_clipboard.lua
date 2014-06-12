@@ -1113,8 +1113,8 @@ local function AdvDupe2_Spawn()
 		if(Queue.Current>#Queue.SortedEntities)then
 			
 			for _,Ent in pairs(Queue.CreatedEntities)do
-				--ApplyEntityModifiers( Queue.Player, Ent )
-				--ApplyBoneModifiers( Queue.Player, Ent )
+				ApplyEntityModifiers( Queue.Player, Ent )
+				ApplyBoneModifiers( Queue.Player, Ent )
 			
 				--If the entity has a PostEntityPaste function tell it to use it now
 				if Ent.PostEntityPaste then
@@ -1122,13 +1122,10 @@ local function AdvDupe2_Spawn()
 					if(not status)then
 						print("AD2 PostEntityPaste Error: "..tostring(valid))
 					end
-					ApplyEntityModifiers( Queue.Player, Ent )
-					ApplyBoneModifiers( Queue.Player, Ent )
-			
 				end
 			
 
-		end
+			end
 
 			Queue.Entity = false
 			Queue.Constraint = true
